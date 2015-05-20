@@ -736,7 +736,7 @@ class F90toRst(object):
         if aliasof is not None:
             falias = fname
             fname = aliasof
-        if fname in self.routines.keys() and fname in self.routines[fname]['aliases']:
+        if fname in self.routines.keys() and "aliases" in self.routines[fname].keys() and fname in self.routines[fname]['aliases']:
             falias = fname
             fname = self.routines[fname]['name']
         else:
